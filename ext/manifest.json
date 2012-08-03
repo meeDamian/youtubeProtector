@@ -1,0 +1,29 @@
+{
+    "name": "Web Protector",
+    "version": "0.2",
+    "manifest_version":"2",
+
+    "description": "This extension allows you to maintain peace and order in english speaking part of the universe",
+
+    "background": {
+        "scripts": ["background.js"]
+    },
+
+    "content_scripts": [{
+        "matches":["*://*.youtube.com/*", "*://youtube.com/*", "*://youtu.be/*"],
+        "js": ["logout.js"]
+    }],
+
+    "web_accessible_resources": [
+        "logo.png",
+        "nope.htm"
+    ],
+
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "*://*.youtube.com/*",
+        "*://youtube.com/*",
+        "*://youtu.be/*"
+    ]
+}
